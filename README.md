@@ -24,5 +24,7 @@ A Programming Language for Gal Games
 
 #### Variables:
 Strings: like strings in Java, can be used to store character's name or something else.
+
 Numbers: double in Java, can store floating point values.
+
 People: characters in the game. They all have names.
