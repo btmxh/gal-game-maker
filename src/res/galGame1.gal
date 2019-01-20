@@ -1,0 +1,41 @@
+[config] [autoContinue] false
+[config] [giapLaTroCung] true
+
+[resource] [music] [path = "D:\background.mp3"] background
+[resource] [image] [path = "D:\logo.png"] logo
+[resource] [images] [path = "D:\images"] [ext = "jpg"] images
+
+[variable] [person] [name = "swarchers"] player
+[variable] [person] [name = "cosi"] gf1
+[variable] [person] [name = "bcs"] gf2
+[variable] [number] fiery = 1.0
+
+[startGame]
+//[title] gal game
+//[size] 900 600
+[nextImage] images
+[question] [player] Your Name?
+[input] [[player] name]
+[nextImage] images
+[playSound] background
+[conversation] [player] Hello. I am [[player] name]. Yesterday I saw my new waifu. She is [[gf1] name]. 
+//[wait]
+[conversation] [gf1] Hello. [[player] name]-kun.
+//[wait]
+[image] [2] images
+[image] logo
+[question] [variableName = "q1"] [gf1] Are you free this weekend?
+[choice] [1] Yes.
+[choice] [2] No. 
+
+[[[q1] choice] == 1] => 
+[conversation] [gf1] Let's go dating. 
+[endCondition]
+
+[[[q1] choice] == 2]=> 
+[1==1] =>
+[conversation] [gf1] OK. 
+[endCondition]
+[endCondition]
+
+[endGame]
