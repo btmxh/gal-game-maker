@@ -20,6 +20,18 @@ A Programming Language for Gal Games
 [title] YOUR_TITLE
 [size] WIDTH HEIGHT
 
+//Conversations
+[conversation] [owner] the sentence...
+E.g.
+[conversation] [girlfriend] Hello [[player] name]. My name is Yukino. 
+//the [[player] name] part is to get the name of the player (See Accessing Variables below)
+
+//Next image of the images resource (like a stack)
+[nextImage] images_resource
+
+//Draw image
+[image] image_resource
+[image] [index] images_resource //get the image from images resource with the index.
 ```
 
 #### Variables:
@@ -58,3 +70,50 @@ Example:
 [size] 100 100
 [endCondition]
 ```
+
+#### Accessing fields
+
+To get a field of a variable (like name of a person, choice index of a question), you use the following syntax:
+```
+[[variable] fieldName]
+//Example
+[[question] choice] //Return the choice index of the variable 'question'
+[[player] name] //Return the name of the variable 'player'
+```
+
+#### Questions
+1. Choice Questions
+Syntax:
+```
+[question] [variableName = "variable_name_here"] [asker] question_here
+[choice] [choiceIndex] choice1_here
+[choice] [choiceIndex] choice2_here
+[choice] [choiceIndex] choice3_here
+(maximum 3 choices)
+```
+Example: (from the test code)
+```
+[question] [variableName = "q1"] [gf1] Are you free this weekend?
+[choice] [1] Yes.
+[choice] [2] No. 
+```
+
+You can later access the choice by using
+```
+[[questionVariableName] choice]
+```
+
+1. Choice Questions
+Syntax:
+```
+[question] [variableName = "variable_name_here"] [asker] question_here
+[choice] [choiceIndex] choice1_here
+[choice] [choiceIndex] choice2_here
+[choice] [choiceIndex] choice3_here
+(maximum 3 choices)
+```
+Example: (from the test code)
+```
+[question][gf1] Are you free this weekend?
+```
+
