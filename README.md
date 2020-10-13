@@ -1,5 +1,6 @@
 # gal-game-maker
-A Programming Language for Gal Games
+~~A Programming Language for Gal Games~~
+do not use this, its shit and not maintained, use something like ren'py instead
 
 #### Commands:
 ```
